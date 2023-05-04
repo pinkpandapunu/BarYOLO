@@ -1,43 +1,65 @@
-#title{
-    background-color: #ff4c68;
+
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(60deg, #542e82,#000000, #000000 );
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
 }
+/*Logo*/
+.logo{
+    margin: 2rem;
+    top:0;
+    left: 0;
+}
+
 /* Background video*/
-.videoControl{
+/* Background video*/
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    min-height:100vh;
+    padding-bottom: 100px;
+}
+
+
+.video-bg{
+    z-index: -1;
+    width: 100vh;
     position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-
-}
-
-@media (min-aspect-ratio:5/4){
-    .videoControl{
-        width: 100%;
-        height: auto;
-    }
-}
-
-@media (max-aspect-ratio:5/4){
-    .videoControl{
-        width: auto;
-        height: 100%;
-    }
-}
+    top: 0;
+    left: 0; 
+    min-width: 100%;
+    min-height: 100%;
+} 
 
 body{
     font-family: "montserrat";
 }
 
 .navbar{
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
     padding:0 0 4.5rem;
+    justify-content: space-between;
+    color: #fff;
 
-}
-
-.nav-item{
-    padding:0 18px;
 }
 
 .nav-link{
@@ -67,17 +89,19 @@ h2{
     font-size: 2.5rem;
     line-height: 1.5;
     font-weight: bolder;
+    color: whitesmoke;
 }
 
 
 h3{
     font-family: "montserrat";
     font-weight: bold;
-    font-size: 1.4rem;
+    font-size: 2.3rem;
+    color: aliceblue;
 }
 
 p{
-    color: #8f8f8f;
+    color: #ffffff;
 }
 .container-fluid{
     padding: 3% 15%;
@@ -99,21 +123,7 @@ p{
 #features{
     padding: 7% 10%;
     position: relative;
-    background: linear-gradient(300deg, #ffffff, #febdff, #fff3a1);
-    background-size: 180% 180%;
-    animation: gradient-animation 18s ease infinite;
-  }
-  
-  @keyframes gradient-animation {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
+ 
   }
   
 
@@ -123,23 +133,22 @@ p{
 }
 
 span{
-    color: #ef8172;
+    color: #ae00ff;
     margin-bottom: 8%;
 }
 
 span:hover{
-    color: #ff4c68;
+    color: #ff0505;
 }
 
 /* Testimonial */
 
 #staff{
     text-align: center;
-    background-color: #ff4c68;
     color: antiquewhite;
 }
 
-.labrador{
+.staffPic{
     width: 10%;
     border-radius: 100%;
     margin: 20px;
@@ -148,7 +157,6 @@ span:hover{
 /* press */
 
 #press{
-    background-color: #ff4c68;
     padding-bottom: 3%;
     text-align: center;
 }
@@ -170,21 +178,27 @@ span:hover{
     width: 25%;
     float: right;
     padding-left: 30px;
+    border-radius: 100%;
 }
 .event-picture2{
     width: 25%;
     float: left;
     padding-right: 30px;
-    
+    border-radius: 100%;
+}
+.イベント-row{
+    width: 50%;
+    margin:100px auto 100px auto;
+    text-align: left;
+    color: #fff;
 }
 
 
 
 
 
-#cta{
-    background-color: #ff4c68;
-    padding: 7% 15%;
+
+#randa{    
     text-align: center;
 }
 
@@ -192,18 +206,29 @@ span:hover{
     font-family: "montserrat";
     font-weight:bolder;
     text-align: center;
-    font-size: 3.5rem;
+    font-size: 2rem;
     color: aliceblue;
-    
-
 }
 
 .ctbb{
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
     text-align: center;
     padding-top: 3% 2%;
     margin: 5% 3% 5% 0;
 }
+.ctbb:hover{
+    background-color: #ce85ff;
+}
 
 #footer{
     text-align: center;
+}
+
+.map{
+    display: flex;
+    text-align: left;
+    margin-left: 100px;
+    padding: 50px;
 }
